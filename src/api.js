@@ -46,3 +46,6 @@ export const popularGamesUrl = () => `${base_url}${popular_games}`;
 export const upcomingGamesUrl = () => `${base_url}${upcoming_games}`;
 
 export const newGamesUrl = () => `${base_url}${newGames}`;
+
+export const gameDetailsUrl = (game_id) =>
+  `${base_url}games/${game_id}?&key=${key_url}`;
