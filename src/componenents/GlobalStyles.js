@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
 }
 html{
     &::-webkit-scrollbar{
-        width: 0%.5rem;
+        width: 0.5rem;
     }
     &::-webkit-scrollbar-thumb {
         background-color: darkgrey;
