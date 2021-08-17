@@ -34,13 +34,22 @@ const GameDetail = ({ pathId }) => {
     // const rating = Math.floor(game.rating);
     const rating = game.rating;
     for (let i = 1; i <= 5; i++) {
+      // if (i <= rating) {
+      //   stars.push(<img alt="star" key={i} src={starFull}></img>);
+      // } else if (i > rating && i - rating < 1) {
+      //   stars.push(<img alt="star" key={i} src={starHalf}></img>);
+      // } else {
+      //   stars.push(<img alt="star" key={i} src={starEmpty}></img>);
+      // }
+      let starShape = "";
       if (i <= rating) {
-        stars.push(<img alt="star" key={i} src={starFull}></img>);
+        starShape = starFull;
       } else if (i > rating && i - rating < 1) {
-        stars.push(<img alt="star" key={i} src={starHalf}></img>);
+        starShape = starHalf;
       } else {
-        stars.push(<img alt="star" key={i} src={starEmpty}></img>);
+        starShape = starEmpty;
       }
+      stars.push(<img alt="star" key={i} src={starShape}></img>);
     }
     return stars;
   };
