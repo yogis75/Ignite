@@ -39,9 +39,15 @@ const Nav = () => {
 
 const StyledNav = styled(motion.nav)`
   padding: 3rem 5rem;
+  @media (max-width: 768px) {
+    padding: 3rem;
+  }
   text-align: center;
   input {
     width: 30%;
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
     font-size: 1.5rem;
     padding: 0.5rem;
     border: none;
@@ -49,6 +55,9 @@ const StyledNav = styled(motion.nav)`
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   }
   button {
+    @media (max-width: 768px) {
+      width: 100%;
+    }
     font-size: 1.5rem;
     border: none;
     padding: 0.5rem 2rem;
@@ -61,6 +70,9 @@ const Logo = styled(motion.div)`
   display: flex;
   justify-content: center;
   padding: 1rem;
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
   cursor: pointer;
   img {
     height: 2rem;
